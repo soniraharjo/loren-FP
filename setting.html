@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="asset/css/css.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script
+  src="jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+	<header><h1>setting</h1></header>
+	<div class="layouttombol"><br>
+
+
+
+	<button class="tombol" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ganti Username</a></button><br>
+
+	<button class="tombol" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myEMAIL">Ganti Email</a></button>
+	<br>
+	
+	<button class="tombol" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myHP">Ganti No HP</a></button><br>
+	<br>
+	
+	<button class="tmblsimpan"><a href="dashboard.html"> Simpan </a></button>
+
+<!-- Kolom modal username -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Masukkan Username baru ...!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        Username    <br>
+        <input type="text" name="text" accept="">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+        
+<!-- Kolom modal email -->
+<div class="modal" id="myEMAIL">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Masukkan Email baru ...!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        Email    <br>
+        <input type="text" name="text" accept="">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- Kolom modal HP -->
+<div class="modal" id="myHP">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Masukkan no HP baru ...!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        No HP    <br>
+        <input type="text" name="text" accept="">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="layoutfoto">
+	<div class="foto"><img src="foto.png" width="250" height="250"></div>
+		<!-- <a href="" target="_explorer.exe">ganti foto klik sini</a> -->
+		<p></p>
+		<form action="php.php">
+			<input type="file" name="picture" accept="image/*">
+			<input type="submit">
+			
+		</form>
+</div>
+<script type="text/javascript">
+	
+		$(".show-tmblsimpan").on("click",function(){
+		$(".tmblsimpan").toggleclass("showed")
+	});
+		$(".hide-tmblsimpan").on("click",function(){
+		$(".tmblsimpan").toggleclass("showed")
+	});
+		$(".show-tombol").on("click",function(){
+		$(".tombol").toggleclass("showed")
+	});
+		$(".show-tombol").on("click",function(){
+		$(".tombol").toggleclass("showed")
+	});
+var input = $( "input:file" ).css({
+  background: "yellow",
+  border: "3px red solid"
+});
+$( "p" )
+  .text( "klik chose file untuk ganti foto" )
+  .css( "color", "red" );
+$( "form" ).submit(function( event ) {
+  event.preventDefault();
+});
+</script>
+</script>
+
+</body>
+</html>

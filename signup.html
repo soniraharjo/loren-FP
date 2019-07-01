@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="asset/css/signup.css">
+
+  <title></title>
+  
+</head>
+<body>
+  	<div class="container">
+    	<h2 class="text-center">LOREN</h2>
+ 			<form id="formContoh">
+ 			<div class="form-group">
+ 			<label></label>
+ 					<input type="text" name="username" id="username" placeholder="Username" class="form-control" minlength="5" data-fv-stringlength-message="Username harus lebih dari 5 Karakter">
+ 		</div>
+ 	<div class="form-group">
+ <label></label>
+ <input type="password" name="password" id="password" placeholder="Password" class="form-control" data-fv-stringlength-message="Minimal 10 Karakter">
+ </div>
+ <div class="form-group">
+ <label></label>
+ <input type="text" name="telepon" id="telepon" placeholder="telepon" class="form-control" onkeyup="checkNumber()" minlength="11" data-fv-stringlength-message="Telepon minimal 11 Karakter">
+ </div>
+ <div class="form-group">
+ <label></label>
+ <input type="text" name="emailUser" id="emailUser" onchange="ValidateEmail()" placeholder="example@mail.com" class="form-control">
+ </div>
+ <div class="form-group">
+ <label></label>
+ <textarea type="text" name="alamat" id="alamat" placeholder="alamat" class="form-control"></textarea>
+ </div>
+ <div class="form-group">
+ <form method="POST" action="dashboard.html"><button type="submit" class="btn"><a href="dashboard.html">Sign up</a></button><br><br></form>
+ </div>
+ </form>
+ </div>
+ </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready (function() {
+ $('#formContoh').formValidation({
+ framework: 'bootstrap',
+ excluded: 'disabled',
+ icon: {
+ valid: 'glyphicon glyphicon-ok',
+ invalid: 'glyphicon glyphicon-remove',
+ validating: 'glyphicon glyphicon-refresh'
+ },
+ fields: {
+ username: {
+ validators: {
+ notEmpty: {
+ message: 'Username Tidak Boleh Kosong'
+ }
+ }
+ },
+ password: {
+ validators: {
+ notEmpty: {
+ message: 'Password Tidak Boleh Kosong'
+ },
+ identical: {
+ field: 'repassword',
+ message: 'Samakan password dengan Confrim Password'
+ } 
+ }
+ },
+repassword: {
+ validators: {
+ notEmpty: {
+ message: 'Confirm Password Tidak Sama'
+ },
+ identical: {
+ field: 'password',
+ message: 'Password Tidak sama'
+ } 
+ }
+ },
+ telepon: {
+ validators: {
+ notEmpty: {
+ message: 'telepon Tidak Boleh Kosong'
+ }
+ }
+ },
+ emailUser: 'mysite@ourearth.com'
+ validators: {
+ notEmpty: {
+ message: 'Email Tidak Boleh Kosong'
+ },
+ emailAddress: {
+ message: 'Email Tidak Valid'
+ }
+ }
+ },
+ alamat: {
+ validators: {
+ notEmpty: {
+ message: 'alamat Tidak Boleh Kosong'
+ }
+ }
+ }
+ }
+ })
+});
+function checkNumber()
+ {
+ var validasiAngka = /^[0-9]+$/;
+ var tahunLahir = document.getElementById("telepon");
+ 
+ if (tahunLahir.value.match(validasiAngka)) {
+ //alert("Tahun Lahir Kamu Adalah " + tahunLahir.value);
+ } else {
+ alert("Masukkan Format Wajib Angka!");
+ tahunLahir.focus();
+ return false;
+ }
+ }
+function ValidateEmail(mail) 
+{ 
+ if (/mysite@ourearth.com/.test(emailUser)) 
+ { 
+ return (false) 
+ } 
+ alert("Masukkan e-Mail Dengan Benar") 
+ return (true) 
+}
+</script>
+
+</body>
+</html>

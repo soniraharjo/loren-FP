@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-template>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="asset/css/paket.css">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+</head>
+<body>
+  <header><h1>Paket Order</h1></header>
+	<div ng-app="planetApp">
+  <script type="text/ng-template" id="atmosphere.html">
+    <h2>Paket: {{planet.name}}</h2>
+    <p>Harga /kg: {{planet.harga}}</p>
+    <p>Waktu: {{planet.waktu}}</p>
+    <p>Paket: {{planet.paket}}</p>
+    <p></p>
+    <button><a href="Order.html">Orders</a></button>
+  </script>
+  <ul>
+    <li><a href="#!/reguler">Reguler</a></li>
+    <li><a href="#!/fast">12 Jam</a></li>
+    <li><a href="#!/superfast">4 Jam</a></li>
+  </ul>
+  <div class="planet-container">
+    <div class="planet-view" ng-view></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var app = angular.module('planetApp', ['ngRoute', 'ngAnimate']);
+app.config(function($routeProvider) {
+  $routeProvider
+    .when('/reguler', {
+      templateUrl: "atmosphere.html",
+      controller: "mercuryCtrl"
+    })
+    .when('/fast', {
+      templateUrl: "atmosphere.html",
+      controller: "venusCtrl"
+    })
+    .when('/superfast', {
+      templateUrl: "atmosphere.html",
+      controller: "earthCtrl"
+    })
+});
+
+app.controller("mercuryCtrl", function($scope, $route) {
+  $scope.planet = {
+    name: 'Reguler',
+    harga: 'Rp 8.000,-',
+    waktu: '2 hari',
+    paket: 'Pelembut dan pewangi'
+  }
+});
+
+app.controller("venusCtrl", function($scope, $route) {
+  $scope.planet = {
+    name: 'Fast',
+    harga: 'Rp 15.000,-',
+    waktu: '12 Jam',
+    paket: 'Pelembut dan pewangi'
+  }
+});
+
+app.controller("earthCtrl", function($scope, $route) {
+  $scope.planet = {
+    name: 'Super Fast',
+    harga: 'Rp 25.000,-',
+    waktu: '4 Jam',
+    paket: 'Pelembut dan pewangi'
+  }
+});
+
+</script>
+</body>
+</html>
