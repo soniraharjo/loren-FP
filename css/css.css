@@ -1,0 +1,86 @@
+header{
+	background-color: black;
+	height: 70px;
+	width: 100%;
+	color: white;
+	font-family: arial;
+	text-align: center;
+	line-height: 20px;
+	display: flex;
+	justify-content: center;	
+		}
+body{
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+a:link, a:visited {
+
+  color: white;
+  width: 200px;
+  height: 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.notice{
+	width: 400px;
+	height: 100px;
+	text-align: center;
+	font-family: arial;
+	padding: 300px;
+		}
+
+.tombol {
+	text-align: center;
+  	background:black;
+  	width: 400px;
+  	height: 50px;
+  	color:white;
+  	padding:10px 20px;
+  	text-decoration:none;
+  	font-family:sans-serif;
+  	font-size:11pt;
+  	border-radius: 30px;
+}
+.tmblsimpan{
+	text-align: center;
+  	background:black;
+  	width: 250px;
+  	height:50px;
+  	color:white;
+  	padding:10px 20px;
+  	text-decoration:none;
+  	font-family:sans-serif;
+  	font-size:11pt;
+  	border-radius: 30px;
+
+}
+
+.layouttombol{
+	width: 50%;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+.layoutfoto{
+	width: 50%;
+	height: 500px;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	display: flex;
+	padding-top: 2%;
+}
+.foto{
+	width: 250px;
+	height: 250px;
+}
+button{
+	height: 50px
+}

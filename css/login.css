@@ -1,0 +1,46 @@
+    body {
+      background-image: url(back.jpg);
+    }
+
+    .btn{
+      color: white; 
+      background-color: #2A2B2B;
+      border-radius: 30px;
+     
+    }
+
+    .container {
+      width: 30%;
+      margin-top: 5%;
+      padding-bottom: 100px;
+      padding-top: 100px;
+      box-shadow: 0 6px 20px ;
+      border-radius: 30px;
+      text-align: center;
+    }
+    h3{
+      color: white;
+    }
+
+    .text-center {
+      color: white;
+    }
+
+    .form-control {
+      color:#2A2B2B;
+    }
+
+    .api{
+      padding-left:0px;
+    }
+
+    .twitter-share-button{
+      margin-left: 15px;
+    }
+
+    .clsApi{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    
